@@ -750,10 +750,17 @@
     font-style: normal;
     position: relative;
     z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .social-proof i {
     color: #00CC83;
+}
+
+.social-proof-text {
+    display: inline-block;
 }
 
 /* Client Logos Section */
@@ -876,6 +883,26 @@
     font-weight: 700;
     color: #000000;
     margin-bottom: 1rem;
+}
+
+.value-card .card-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 1rem;
+}
+
+.value-card .card-description {
+    font-size: 16px;
+    color: #343A40;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    text-overflow: unset;
+    overflow: visible;
+    white-space: normal;
+    display: block !important;
+    -webkit-line-clamp: unset !important;
+    -webkit-box-orient: unset !important;
 }
 
 .card-description {
@@ -3182,9 +3209,31 @@
     }
     
     .social-proof {
-        flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 1rem;
+        text-align: center;
+    }
+    
+    .social-proof-text {
+        text-align: center;
+    }
+}
+
+/* Additional responsive styles for social proof on very small screens */
+@media (max-width: 480px) {
+    .social-proof {
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+    
+    .social-proof i {
+        margin-right: 0.5rem;
+    }
+    
+    .social-proof-text {
+        text-align: center;
+        line-height: 1.4;
     }
 }
 
