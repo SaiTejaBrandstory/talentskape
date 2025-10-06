@@ -81,6 +81,9 @@
         <div class="grid-overlay"></div>
         <div class="blur-circle-1"></div>
         <div class="blur-circle-2"></div>
+        <div class="hero-video-image">
+            <img src="assets/images/home/home-video.svg" alt="Hero Video" class="video-icon">
+        </div>
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-10 text-center">
@@ -112,7 +115,7 @@
                     </div>
                     
                     <!-- Social Proof -->
-                    <div class="social-proof">
+                    <div class="social-proof hero-social d-block">
                         <i class="fas fa-check-circle me-2"></i>
                         <span class="social-proof-text">5,639+ professionals hired as of Sept 8, 2025</span>
                     </div>
@@ -901,7 +904,7 @@
     <section class="contact-section">
         <div class="container">
             <div class="contact-container">
-                <div class="row align-items-center">
+                <div class="row">
                     <!-- Left Column - Promotional Content -->
                     <div class="col-lg-6">
                         <div class="contact-content">
@@ -920,33 +923,34 @@
                     
                     <!-- Right Column - Contact Form -->
                     <div class="col-lg-6">
-                        <div class="contact-form-container">
-                            <h3 class="form-title">Contact us</h3>
-                            <form class="contact-form">
+                        <div class="contact-form-wrapper">
+                            <div class="contact-form-container">
+                                <h3 class="form-title">Contact us</h3>
+                                <form class="contact-form">
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="firstName">First Name *</label>
-                                            <input type="text" id="firstName" name="firstName" value="Sam" required>
+                                            <label for="firstName">First Name <span class="asterisk">*</span></label>
+                                            <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="lastName">Last Name *</label>
-                                            <input type="text" id="lastName" name="lastName" placeholder="Type here" required>
+                                            <label for="lastName">Last Name <span class="asterisk">*</span></label>
+                                            <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
                                         </div>
                                     </div>
                                 </div>
                                 
                                 <div class="form-group">
-                                    <label for="workEmail">Work Email *</label>
+                                    <label for="workEmail">Work Email <span class="asterisk">*</span></label>
                                     <input type="email" id="workEmail" name="workEmail" placeholder="Work Email" required>
                                 </div>
                                 
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="jobTitle">Job Title *</label>
+                                            <label for="jobTitle">Job Title <span class="asterisk">*</span></label>
                                             <select id="jobTitle" name="jobTitle" required>
                                                 <option value="">Select</option>
                                                 <option value="ceo">CEO</option>
@@ -956,30 +960,46 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="companyName">Company Name *</label>
-                                            <input type="text" id="companyName" name="companyName" placeholder="Type" required>
+                                            <label for="companyName">Company Name <span class="asterisk">*</span></label>
+                                            <input type="text" id="companyName" name="companyName" placeholder="Company Name" required>
                                         </div>
                                     </div>
                                 </div>
                                 
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="phoneNumber">Phone Number *</label>
-                                            <div class="phone-input">
-                                                <div class="country-code">
-                                                    <span class="flag">🇮🇳</span>
-                                                    <span class="code">+91</span>
+                                            <label for="phoneNumber">Phone Number <span class="asterisk">*</span></label>
+                                            <div class="phone-input-wrapper">
+                                                <div class="country-picker" id="countryPicker">
+                                                    <img src="https://flagcdn.com/w40/in.png" alt="India" class="country-flag" id="selectedFlag">
+                                                    <span class="country-dial-code" id="selectedCode">+91</span>
+                                                    <span class="picker-arrow">▼</span>
                                                 </div>
-                                                <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" required>
+                                                <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" class="phone-input-field" required>
+                                                
+                                                <!-- Hidden select for form submission -->
+                                                <select id="countryCode" name="countryCode" style="display: none;">
+                                                    <option value="+91" selected>+91</option>
+                                                </select>
+                                                
+                                                <!-- Country dropdown -->
+                                                <div class="country-picker-dropdown" id="countryPickerDropdown">
+                                                    <div class="picker-search">
+                                                        <input type="text" id="countrySearch" placeholder="Search country...">
+                                                    </div>
+                                                    <div class="picker-list" id="countryList">
+                                                        <!-- Countries will be loaded here -->
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="talentType">Talent Type *</label>
+                                            <label for="talentType">Talent Type <span class="asterisk">*</span></label>
                                             <select id="talentType" name="talentType" required>
                                                 <option value="">Select</option>
                                                 <option value="engineers">Engineers</option>
@@ -993,11 +1013,12 @@
                                 
                                 <div class="form-group">
                                     <label for="message">Message (Optional)</label>
-                                    <textarea id="message" name="message" placeholder="Type here" rows="4"></textarea>
+                                    <textarea id="message" name="message" placeholder="Message" rows="4"></textarea>
                                 </div>
                                 
                                 <button type="submit" class="submit-btn">Submit</button>
-                            </form>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1012,65 +1033,70 @@
             <div class="container">
                 <div class="row">
                     <!-- Company Information -->
-                    <div class="col-lg-2 col-md-6">
-                        <div class="footer-logo">
+                    <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
+                        <div class="footer-logo mb-3">
                             <img src="assets/images/logos/logo-white.svg" alt="Talentskape" class="logo-icon">
                         </div>
                         <p class="footer-description">Talentskape is an exclusive network of the best UX and UI Designers, UX Researchers, UX Architects, Front-End Developers, and UX Architects vetted and screened by the team of design experts in house.</p>
                     </div>
                     
-                    <!-- Solutions -->
-                    <div class="col-lg-2 col-md-6">
-                        <h4 class="footer-heading">Solutions</h4>
-                        <ul class="footer-links">
-                            <li><a href="#">Hire</a></li>
-                            <li><a href="#">Workforce</a></li>
-                            <li><a href="#">Advisory</a></li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Industries Served -->
-                    <div class="col-lg-2 col-md-6">
-                        <h4 class="footer-heading">Industries Served</h4>
-                        <ul class="footer-links">
-                            <li><a href="#">Fintech</a></li>
-                            <li><a href="#">Healthcare</a></li>
-                            <li><a href="#">E-commerce</a></li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Resources -->
-                    <div class="col-lg-2 col-md-6">
-                        <h4 class="footer-heading">Resources</h4>
-                        <ul class="footer-links">
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Case Studies</a></li>
-                            <li><a href="#">Whitepapers</a></li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Careers -->
-                    <div class="col-lg-2 col-md-6">
-                        <h4 class="footer-heading">Careers</h4>
-                        <ul class="footer-links">
-                            <li><a href="#">UI UX Designers</a></li>
-                            <li><a href="#">Developers</a></li>
-                            <li><a href="#">Visual Designers</a></li>
-                            <li><a href="#">UX Designers</a></li>
-                        </ul>
+                    <!-- Middle Section with 4 columns -->
+                    <div class="col-lg-7 col-md-8 mb-4 mb-lg-0">
+                        <div class="row justify-content-center">
+                            <!-- Solutions -->
+                            <div class="col-lg-3 col-md-6 col-6 mb-3 mb-lg-0">
+                                <h4 class="footer-heading mb-3">Solutions</h4>
+                                <ul class="footer-links list-unstyled">
+                                    <li class="mb-2"><a href="#">Hire</a></li>
+                                    <li class="mb-2"><a href="#">Workforce</a></li>
+                                    <li class="mb-2"><a href="#">Advisory</a></li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Industries Served -->
+                            <div class="col-lg-3 col-md-6 col-6 mb-3 mb-lg-0">
+                                <h4 class="footer-heading mb-3">Industries Served</h4>
+                                <ul class="footer-links list-unstyled">
+                                    <li class="mb-2"><a href="#">Fintech</a></li>
+                                    <li class="mb-2"><a href="#">Healthcare</a></li>
+                                    <li class="mb-2"><a href="#">E-commerce</a></li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Resources -->
+                            <div class="col-lg-3 col-md-6 col-6 mb-3 mb-lg-0">
+                                <h4 class="footer-heading mb-3">Resources</h4>
+                                <ul class="footer-links list-unstyled">
+                                    <li class="mb-2"><a href="#">Blog</a></li>
+                                    <li class="mb-2"><a href="#">Case Studies</a></li>
+                                    <li class="mb-2"><a href="#">Whitepapers</a></li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Careers -->
+                            <div class="col-lg-3 col-md-6 col-6 mb-3 mb-lg-0">
+                                <h4 class="footer-heading mb-3">Careers</h4>
+                                <ul class="footer-links list-unstyled">
+                                    <li class="mb-2"><a href="#">UI UX Designers</a></li>
+                                    <li class="mb-2"><a href="#">Developers</a></li>
+                                    <li class="mb-2"><a href="#">Visual Designers</a></li>
+                                    <li class="mb-2"><a href="#">UX Designers</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     
                     <!-- Contact Us -->
-                    <div class="col-lg-2 col-md-6">
-                        <h4 class="footer-heading">Contact Us</h4>
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <span class="contact-icon">✉</span>
-                                <span class="contact-text">info@talentskape.com</span>
+                    <div class="col-lg-2 col-md-4 col-12">
+                        <h4 class="footer-heading mb-3">Contact Us</h4>
+                        <div class="contact-info d-flex flex-column gap-3">
+                            <div class="contact-box">
+                                <img src="assets/images/logos/envelope-simple-ftr.svg" alt="Email" class="contact-box-icon">
+                                <a href="mailto:info@talentskape.com" class="contact-box-text">info@talentskape.com</a>
                             </div>
-                            <div class="contact-item">
-                                <span class="contact-icon">📞</span>
-                                <span class="contact-text">+91 914 441 4000</span>
+                            <div class="contact-box">
+                                <img src="assets/images/logos/headset-ftr.svg" alt="Phone" class="contact-box-icon">
+                                <a href="tel:+919144414000" class="contact-box-text">+91 914 441 4000</a>
                             </div>
                         </div>
                     </div>
@@ -1082,21 +1108,17 @@
         <div class="footer-bottom">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <p class="copyright">© 2025 Talentskape. All rights reserved.</p>
+                    <div class="col-md-6 col-12 text-center text-md-start">
+                        <p class="copyright mb-0">© 2025 Talentskape. All rights reserved.</p>
                     </div>
-                    <div class="col-md-6">
-                        <div class="social-links">
+                    <div class="col-md-6 col-12">
+                        <div class="social-links d-flex align-items-center justify-content-center justify-content-md-end gap-2 mt-3 mt-md-0">
                             <span class="follow-text">Follow us on</span>
                             <a href="#" class="social-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/>
-                                </svg>
+                                <img src="assets/images/logos/LinkedinLogo.svg" alt="LinkedIn" width="24" height="24">
                             </a>
                             <a href="#" class="social-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="currentColor"/>
-                                </svg>
+                                <img src="assets/images/logos/InstagramLogo.svg" alt="Instagram" width="24" height="24">
                             </a>
                         </div>
                     </div>
