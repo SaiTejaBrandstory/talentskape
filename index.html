@@ -36,7 +36,7 @@
 
                 <!-- Navigation Menu -->
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="#">Home</a>
                         </li>
@@ -67,7 +67,7 @@
                     </ul>
                     
                     <!-- Contact Button -->
-                    <button class="btn btn-contact ms-3">
+                    <button class="btn btn-contact">
                         <img src="assets/images/home/headphones.svg" alt="Headphones" class="contact-icon me-2">
                         Contact us
                     </button>
@@ -81,10 +81,10 @@
         <div class="grid-overlay"></div>
         <div class="blur-circle-1"></div>
         <div class="blur-circle-2"></div>
-        <div class="hero-video-image">
-            <img src="assets/images/home/home-video.svg" alt="Hero Video" class="video-icon">
-        </div>
         <div class="container">
+            <div class="hero-video-image">
+                <img src="assets/images/home/home-video.svg" alt="Hero Video" class="video-icon">
+            </div>
             <div class="row justify-content-center">
                 <div class="col-lg-10 text-center">
                     <!-- Main Heading -->
@@ -175,7 +175,7 @@
 
     <!-- Core Value Proposition Section -->
     <section class="core-value-section">
-        <div class="container">
+        <div class="container px-lg-0">
             <div class="text-center mb-5">
                 <button class="section-badge">What We Offer</button>
                 <h2 class="section-title">Core Value Proposition</h2>
@@ -241,7 +241,7 @@
                             Register
                         </button>
                     </div>
-                    <h2 class="section-title text-start mb-4">Why Talentskape?</h2>
+                    <h2 class="section-title text-start mb-2">Why Talentskape?</h2>
                     <p class="section-description text-start mb-5" style="margin: 0;">
                         Unlike conventional agencies, we unify vetted talent with<br>workforce intelligence — helping you hire smarter and scale faster.
                     </p>
@@ -321,7 +321,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <span class="comparison-badge mt-4">Hire UI UX Talents with Talentskape</span>
+                    <span class="comparison-badge">Hire UI UX Talents with Talentskape</span>
                     <h2 class="comparison-title">What's the difference between a<br>Recruiting Agency Vs Talentskape you ask?</h2>
                 </div>
             </div>
@@ -377,7 +377,7 @@
     </section>
 
     <!-- For Talent Section -->
-    <section class="for-talent-section">
+    <section class="for-talent-section simple-process">
         <div class="container">
             <div class="talent-header">
                 <div class="row align-items-center">
@@ -385,8 +385,28 @@
                         <span class="talent-badge">Simple Process</span>
                         <h2 class="talent-title">How It Works</h2>
                         <p class="talent-description">Finding the right talent or workforce insights shouldn't be complicated. With Talentskape, it's a simple, seamless process from start to finish.</p>
-                        <div class="works-image">
+                        
+                        <!-- Desktop Image -->
+                        <div class="works-image d-none d-md-block">
                             <img src="assets/images/home/works.svg" alt="How It Works" class="works-img">
+                        </div>
+                        
+                        <!-- Mobile Images -->
+                        <div class="works-mobile-images d-md-none">
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <img src="assets/images/home/process-mb-1.svg" alt="Process Step 1" class="process-mobile-img">
+                                </div>
+                                <div class="col-12">
+                                    <img src="assets/images/home/process-mb-2.svg" alt="Process Step 2" class="process-mobile-img">
+                                </div>
+                                <div class="col-12">
+                                    <img src="assets/images/home/process-mb-3.svg" alt="Process Step 3" class="process-mobile-img">
+                                </div>
+                                <div class="col-12">
+                                    <img src="assets/images/home/process-mb-4.svg" alt="Process Step 4" class="process-mobile-img">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -560,7 +580,7 @@
     </section>
 
     <!-- For Talent Section -->
-    <section class="for-talent-section">
+    <section class="for-talent-section testimonial-div">
         <div class="container">
             <div class="talent-header">
                 <div class="row">
@@ -629,7 +649,7 @@
                 <button class="btn-get-started">Get Started</button>
                 <div class="row align-items-center">
                     <div class="col-lg-7 col-12">
-                        <div class="get-started-text mb-3">
+                        <div class="get-started-text">
                             <h2 class="get-started-title">Ready to Transform Your Talent Strategy?</h2>
                             <p class="get-started-description">Transform the way you hire and plan — start building your future workforce today.</p>
                         </div>
@@ -1089,7 +1109,7 @@
                     <!-- Contact Us -->
                     <div class="col-lg-2 col-md-4 col-12">
                         <h4 class="footer-heading mb-3">Contact Us</h4>
-                        <div class="contact-info d-flex flex-column gap-3">
+                        <div class="contact-info d-flex flex-column gap-2">
                             <div class="contact-box">
                                 <img src="assets/images/logos/envelope-simple-ftr.svg" alt="Email" class="contact-box-icon">
                                 <a href="mailto:info@talentskape.com" class="contact-box-text">info@talentskape.com</a>

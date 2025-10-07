@@ -147,8 +147,8 @@
 /* Comparison Section Styles */
 .comparison-section {
     background: #FFFFFF;
-    padding: 2rem 0;
-    margin: 10px;
+    padding: 4rem 0;
+    margin: 0 10px;
 }
 
 .comparison-section .container {
@@ -166,7 +166,8 @@
     font-weight: 600;
     padding: 8px 16px;
     display: inline-block;
-    margin-bottom: 2rem;
+    margin-bottom: 1.125rem;
+    margin-top: 2.5rem;
     text-align: center;
 }
 
@@ -174,14 +175,14 @@
     font-size: 32px;
     font-weight: 700;
     font-style: Bold;
-    line-height: 36px;
+    line-height: 136%;
     color: #000000;
-    margin-bottom: 2rem;
+    margin-bottom: 3.375rem;
 }
 
 .comparison-table-container {
     overflow-x: auto;
-    margin: 2rem 4rem;
+    margin: 0 4rem 2.5rem;
 }
 
 .comparison-table {
@@ -495,7 +496,7 @@
 
 /* Hero Section Styles */
 .hero-section {
-    background: #FFFFFF;
+    background: #F8F9FA;
     display: flex;
     align-items: center;
     position: relative;
@@ -503,10 +504,14 @@
     overflow: hidden;
 }
 
+.hero-section .container {
+    position: relative;
+}
+
 .hero-video-image {
     position: absolute;
-    right: 3%;
-    top: 65%;
+    right: 0;
+    bottom: 35%;
     z-index: 1;
 }
 
@@ -597,19 +602,19 @@
 }
 
 .hero-title {
-    margin-bottom: 1.5rem;
+    margin-bottom: 8px;
     position: relative;
     z-index: 2;
 }
 
 .hero-subtitle {
-    margin-bottom: 2.5rem;
+    margin-bottom: 28px;
     position: relative;
     z-index: 2;
 }
 
 .hero-buttons {
-    margin-bottom: 2.5rem;
+    margin-bottom: 54px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -686,8 +691,8 @@
 }
 
 .email-signup {
-    margin-bottom: 1.5rem;
-    max-width: 500px;
+    margin-bottom: 8px;
+    max-width: 487px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -784,7 +789,7 @@
 /* Client Logos Section */
 .client-logos {
     background: transparent;
-    padding: 2rem 0;
+    padding: 97px 0 42px;
     overflow: hidden;
     position: relative;
     z-index: 2;
@@ -792,8 +797,11 @@
 
 .logos-title {
     color: #6c757d;
-    font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 136%;
+    text-align: center;
     margin-bottom: 0;
 }
 
@@ -819,13 +827,13 @@
 }
 
 .infinite-scroll-container::before {
-    left: 0px;
-    background: linear-gradient(90deg, #ffffff 59.63%, rgb(255 255 255 / 0%) 100%);
+    left: 0;
+    background: linear-gradient(90deg, #F8F9FA 59.63%, rgba(248, 249, 250, 0) 100%);
 }
 
 .infinite-scroll-container::after {
-    right: 0px;
-    background: linear-gradient(270deg, #fefeff 0%, rgba(254, 254, 255, 0.8) 30%, rgba(254, 254, 255, 0.4) 60%, transparent 100%);
+    right: 0;
+    background: linear-gradient(270deg, #F8F9FA 59.63%, rgba(248, 249, 250, 0) 100%);
 }
 
 .infinite-scroll {
@@ -875,7 +883,11 @@
 /* Core Value Proposition Section */
 .core-value-section {
     background: #FFFFFF;
-    padding: 2rem 0;
+    padding: 4rem 0;
+}
+
+.core-value-section .mb-5 {
+    margin-bottom: 3.38rem !important;
 }
 
 .section-badge {
@@ -886,24 +898,25 @@
     border-radius: 0;
     font-size: 14px;
     font-weight: 600;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.75rem;
 }
 
 .section-title {
     font-size: 32px;
     font-weight: 700;
     color: #000000;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.25rem;
 }
 
 .section-description {
     font-size: 16px;
-    color: #343A40;
+    color: #6C757D;
     font-weight: 400;
     font-style: normal;
     max-width: 570px;
     margin: 0 auto;
     text-align: center;
+    line-height: 164%;
 }
 
 .value-card {
@@ -912,14 +925,13 @@
     border-radius: 20px;
     padding: 2rem;
     height: 100%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
 }
 
 .value-card:hover {
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .card-title {
@@ -940,7 +952,8 @@
     font-size: 16px;
     color: #343A40;
     margin-bottom: 1.5rem;
-    line-height: 1.6;
+    font-weight: 400;
+    line-height: 164%;
     text-overflow: unset;
     overflow: visible;
     white-space: normal;
@@ -963,22 +976,21 @@
 
 .offer-image {
     width: 100%;
-    height: 240px;
+    height: 230px;
     object-fit: contain;
     border-radius: 8px;
 }
 
 /* First card image specific styling */
 .col-lg-4:first-child .offer-image {
-    height: 260px;
+    height: 286px;
     width: 95%;
 }
 
 /* Why Talentskape Section */
 .why-talentskape-section {
     background: #FFFFFF;
-    padding: 2rem 0;
-    margin: 10px;
+    margin: 0 10px;
 }
 
 .why-talentskape-section .container {
@@ -1003,6 +1015,7 @@
     font-size: 14px;
     font-weight: 600;
     padding: 8px 16px;
+    margin-bottom: 10px;
 }
 
 .btn-register {
@@ -1033,7 +1046,7 @@
 }
 
 .why-card:hover {
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
 }
 
 .why-card-green {
@@ -1082,9 +1095,13 @@
     font-size: 24px;
     font-weight: 600;
     font-style: normal;
-    line-height: 32px;
+    line-height: 136%;
     color: #000000;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.why-card .card-content {
+    margin-bottom: 0;
 }
 
 .why-card .card-description {
@@ -1276,7 +1293,7 @@
 /* Solutions Section Styles */
 .solutions-section {
     background: #FFFFFF;
-    padding: 2rem 0;
+    padding: 4rem 0;
 }
 
 .solutions-badge {
@@ -1287,7 +1304,7 @@
     font-weight: 600;
     padding: 8px 16px;
     display: inline-block;
-    margin-bottom: 2rem;
+    margin-bottom: 0.75rem;
     text-align: center;
 }
 
@@ -1295,9 +1312,9 @@
     font-size: 32px;
     font-weight: 700;
     font-style: Bold;
-    line-height: 36px;
+    line-height: 136%;
     color: #000000;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
 }
 
 .solutions-description {
@@ -1313,7 +1330,7 @@
 .solution-card {
     background: #FFFFFF;
     border-radius: 0;
-    padding: 2rem;
+    padding: 1.5rem;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -1321,7 +1338,7 @@
 }
 
 .solution-card:hover {
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
 }
 
 .solution-card-blue {
@@ -1346,9 +1363,6 @@
     background: transparent;
     border-radius: 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1.5rem;
     border: none;
 }
 
@@ -1363,8 +1377,7 @@
     font-weight: 700;
     font-style: Bold;
     color: #212529;
-    margin-bottom: 1rem;
-    line-height: 36px;
+    line-height: 136%;
 }
 
 .solution-description {
@@ -1372,7 +1385,7 @@
     color: #343A40;
     font-weight: 400;
     font-style: Regular;
-    line-height: 24px;
+    line-height: 164%;
     margin-bottom: 0;
 }
 
@@ -1444,7 +1457,7 @@
 /* Success Stories Section Styles */
 .success-stories-section {
     background: #F9F9FF;
-    padding: 2rem 0;
+    padding: 4rem 0;
 }
 
 .success-carousel {
@@ -1514,7 +1527,7 @@
     font-weight: 600;
     padding: 8px 16px;
     display: inline-block;
-    margin-bottom: 2rem;
+    margin-bottom: 0.75rem;
     text-align: center;
 }
 
@@ -1522,9 +1535,9 @@
     font-size: 32px;
     font-weight: 700;
     font-style: Bold;
-    line-height: 36px;
+    line-height: 136%;
     color: #000000;
-    margin-bottom: 2rem;
+    margin-bottom: 0.25rem;
 }
 
 .success-description {
@@ -1533,16 +1546,16 @@
     font-weight: 400;
     font-style: normal;
     max-width: 480px;
-    margin: 0 auto 3rem auto;
+    margin: 0 auto 2.5rem auto;
     text-align: center;
 }
 
 .success-card {
     background: #212529;
     border-radius: 0;
-    padding: 1.5rem;
+    padding: 1rem;
     height: 100%;
-    min-height: 450px;
+    /* min-height: 450px; */
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease;
@@ -1584,8 +1597,8 @@
     font-weight: 700;
     font-style: Bold;
     color: #FFFFFF;
-    line-height: 46px;
-    margin-bottom: 1rem;
+    line-height: 146%;
+    margin-bottom: 2rem;
     flex-grow: 1;
 }
 
@@ -1777,12 +1790,6 @@
         min-height: 380px;
     }
     
-    .card-image {
-        margin-left: -1.25rem;
-        margin-right: -1.25rem;
-        margin-bottom: -1.25rem;
-    }
-    
     .card-headline {
         font-size: 18px;
         line-height: 32px;
@@ -1840,12 +1847,6 @@
     
     .success-card {
         padding: 1rem;
-    }
-    
-    .card-image {
-        margin-left: -1rem;
-        margin-right: -1rem;
-        margin-bottom: -1rem;
     }
     
     .card-headline {
@@ -1924,9 +1925,11 @@
 .feature-list li {
     display: flex;
     align-items: baseline;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
     font-size: 16px;
-    color: #374151;
+    line-height: 164%;
+    color: #343A40;
+    font-weight: 400;
 }
 
 .star-icon {
@@ -1940,7 +1943,37 @@
 .for-talent-section {
     background: #212529;
     background: radial-gradient(162.27% 69.19% at 50% 153.78%, #0D6EFD 20%, #212529 100%);
+    padding: 5rem 0;
+    position: relative;
+}
+
+.testimonial-div {
     padding: 4rem 0;
+}
+
+.testimonial-div .talent-header::before {
+    content: '';
+    position: absolute;
+    top: -4rem;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 80px 80px;
+    opacity: 0.3;
+    pointer-events: none;
+    mask: 
+        linear-gradient(to bottom, black 0%, black 80%, transparent 100%),
+        linear-gradient(to right, black 0%, black 85%, transparent 100%),
+        linear-gradient(to left, black 0%, black 85%, transparent 100%);
+    mask-composite: intersect;
+}
+
+.simple-process {
+    background: #212529;
+    padding: 5rem 0;
     position: relative;
 }
 
@@ -1952,12 +1985,31 @@
 .works-image {
     margin-top: 2rem;
     text-align: center;
+    position: relative;
+    z-index: 10;
 }
 
 .works-img {
     max-width: 100%;
     height: auto;
     max-height: 400px;
+    position: relative;
+    z-index: 10;
+}
+
+.works-mobile-images {
+    width: 80%;
+    margin: auto;
+    position: relative;
+    z-index: 10;
+}
+
+.process-mobile-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 10;
 }
 
 .talent-header::before {
@@ -1966,7 +2018,7 @@
     top: -4rem;
     left: 0;
     right: 0;
-    bottom: 0;
+    height: calc(100% - 20rem);
     background-image: 
         linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
@@ -2572,7 +2624,7 @@
 
 .get-started-card {
     background: #212529;
-    padding: 3rem;
+    padding: 4.5rem 3.5rem;
     position: relative;
     margin: 0 auto;
 }
@@ -2603,7 +2655,7 @@
     border: none;
     border-radius: 0;
     padding: 8px 16px;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     display: inline-block;
 }
 
@@ -2618,7 +2670,7 @@
     font-style: Bold;
     line-height: 36px;
     color: #FFFFFF;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .get-started-description {
@@ -2685,8 +2737,9 @@
 /* Insights Section */
 .insights-section {
     background: #F9F9FF;
-    padding: 2rem 0;
+    padding: 4rem 0;
     position: relative;
+    border: 1px solid #E9ECEF;
 }
 
 .insights-badge {
@@ -2697,7 +2750,7 @@
     font-weight: 600;
     padding: 8px 16px;
     display: inline-block;
-    margin-bottom: 2rem;
+    margin-bottom: 0.75rem;
     text-align: center;
 }
 
@@ -2705,9 +2758,9 @@
     font-size: 32px;
     font-weight: 700;
     font-style: Bold;
-    line-height: 36px;
+    line-height: 136%;
     color: #000000;
-    margin-bottom: 2rem;
+    margin-bottom: 0.25rem;
 }
 
 .insights-description {
@@ -2716,7 +2769,7 @@
     font-weight: 400;
     font-style: normal;
     max-width: 480px;
-    margin: 0 auto 3rem auto;
+    margin: 0 auto 2.7rem auto;
     text-align: center;
 }
 
@@ -2725,7 +2778,7 @@
     display: flex;
     justify-content: center;
     gap: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 2.75rem;
 }
 
 .tab-button {
@@ -2817,11 +2870,11 @@
 
 .expand-icon {
     position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
+    /* top: 1.5rem; */
+    right: 1rem;
     width: 24px;
     height: 24px;
-    filter: brightness(0) invert(1);
+    /* filter: brightness(0) invert(1); */
 }
 
 .card-content {
@@ -2833,7 +2886,7 @@
     font-size: 24px;
     font-weight: 700;
     font-style: Bold;
-    line-height: 32px;
+    line-height: 136%;
     color: #FFFFFF;
     margin-bottom: 1rem;
     padding: 0 20px 0 0;
@@ -2892,7 +2945,7 @@
     font-size: 24px;
     font-weight: 700;
     font-style: Bold;
-    line-height: 32px;
+    line-height: 146%;
     color: #FFFFFF;
     margin-bottom: 1rem;
     padding: 0 20px 0 0;
@@ -2902,7 +2955,7 @@
     font-size: 14px;
     font-weight: 400;
     font-style: Regular;
-    line-height: 20px;
+    line-height: 164%;
     color: #CED4DA;
     margin-bottom: 1.5rem;
     padding: 0 20px 0 0;
@@ -3095,12 +3148,11 @@
     font-weight: 600;
     padding: 8px 16px;
     display: inline-block;
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
     text-align: center;
 }
 
 .contact-title {
-    font-family: 'Lato', sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 48px;
@@ -3115,7 +3167,6 @@
 }
 
 .contact-description {
-    font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
@@ -3682,17 +3733,15 @@
 .contact-box {
     display: flex;
     align-items: center;
-    background: #FFFFFF;
+    background: transparent;
     border: 1px solid #B9B9B9;
-    padding: 8px 12px;
-    margin-bottom: 12px;
+    padding: 0.5rem 0.25rem;
     width: fit-content;
-    min-width: 200px;
+    min-width: 175px;
     max-width: 100%;
     box-sizing: border-box;
     word-wrap: break-word;
     overflow-wrap: break-word;
-    border-radius: 4px;
 }
 
 .contact-box-icon {
@@ -3725,7 +3774,7 @@
 
 .footer-top {
     background: #F8F9FA;
-    padding: 2rem 0;
+    padding: 4rem 0;
 }
 
 .footer-logo {
@@ -3793,7 +3842,7 @@
 
 .footer-bottom {
     background: #000000;
-    padding: 1.5rem 0;
+    padding: 0.75rem 0;
 }
 
 .copyright {
@@ -3864,7 +3913,7 @@
     }
     
     .contact-box {
-        width: 100%;
+        width: 60%;
         min-width: auto;
     }
 }
@@ -3899,6 +3948,10 @@
     
     .picker-search input {
         font-size: 16px; /* Prevents zoom on iOS */
+    }
+
+    .client-logos {
+        padding: 4.5rem 0;
     }
 }
 
@@ -4108,5 +4161,13 @@
     .btn-icon {
         width: 20px;
         height: 20px;
+    }
+
+    .rating-image {
+        width: 80%;
+    }
+
+    .tab-button {
+        padding: 12px;
     }
 }
