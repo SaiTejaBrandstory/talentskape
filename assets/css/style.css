@@ -2725,7 +2725,7 @@
 }
 
 .btn-explore-intelligence {
-    background: #2E0641;
+    background: #6610F2;
 }
 
 .btn-icon {
@@ -2845,7 +2845,6 @@
 .slick-prev:hover,
 .slick-next:hover {
     opacity: 1;
-    transform: scale(1.1);
 }
 
 .slick-dots li button {
@@ -2982,6 +2981,7 @@
     flex-direction: column;
     height: 100%;
     flex: 1;
+    justify-content: space-between;
 }
 
 /* Slick Carousel Styles for Insights */
@@ -3112,6 +3112,79 @@
 .insights-section .slick-prev.slick-disabled:hover svg,
 .insights-section .slick-next.slick-disabled:hover svg {
     color: #343A40;
+}
+
+/* Insights Section Responsive Styles */
+@media (max-width: 992px) {
+    .insights-section .slick-prev,
+    .insights-section .slick-next {
+        width: 36px;
+        height: 36px;
+        bottom: -45px;
+    }
+    
+    .insights-section .slick-prev {
+        right: 45px;
+    }
+    
+    .insights-section .slick-prev svg,
+    .insights-section .slick-next svg {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .insights-section .slick-dots {
+        bottom: -45px;
+        padding: 3px;
+        gap: 6px;
+    }
+    
+    .insights-section .slick-dots li {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .insights-section .slick-dots li button {
+        width: 8px;
+        height: 8px;
+        border-radius: 2px;
+    }
+}
+
+@media (max-width: 768px) {
+    .insights-section .slick-prev,
+    .insights-section .slick-next {
+        width: 32px;
+        height: 32px;
+        bottom: -40px;
+    }
+    
+    .insights-section .slick-prev {
+        right: 40px;
+    }
+    
+    .insights-section .slick-prev svg,
+    .insights-section .slick-next svg {
+        width: 14px;
+        height: 14px;
+    }
+    
+    .insights-section .slick-dots {
+        bottom: -40px;
+        padding: 2px;
+        gap: 4px;
+    }
+    
+    .insights-section .slick-dots li {
+        width: 6px;
+        height: 6px;
+    }
+    
+    .insights-section .slick-dots li button {
+        width: 6px;
+        height: 6px;
+        border-radius: 1px;
+    }
 }
 
 /* Contact Us Section */

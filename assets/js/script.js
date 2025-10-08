@@ -27,7 +27,7 @@ $(document).ready(function() {
             {
                 breakpoint: 992,
                 settings: {
-                    slidesToShow: 4,
+                    slidesToShow: 3,
                     slidesToScroll: 1,
                     infinite: false
                 }
@@ -431,8 +431,42 @@ function testCountryDropdown() {
 // Make test function available globally
 window.testCountryDropdown = testCountryDropdown;
 
+// FAQ Accordion Icon Switching
+function initFAQAccordion() {
+    document.querySelectorAll('.faq-question').forEach(function(question) {
+        const targetId = question.getAttribute('data-bs-target');
+        const collapseElement = document.querySelector(targetId);
+        
+        if (collapseElement) {
+            // Listen for Bootstrap collapse events on the collapse element
+            collapseElement.addEventListener('show.bs.collapse', function() {
+                const iconContainer = question.querySelector('.faq-icon');
+                const plusIcon = iconContainer.querySelector('.faq-icon-plus');
+                const minusIcon = iconContainer.querySelector('.faq-icon-minus');
+                
+                // Show minus icon (open state)
+                plusIcon.style.display = 'none';
+                minusIcon.style.display = 'block';
+                iconContainer.style.background = '#212529';
+            });
+            
+            collapseElement.addEventListener('hide.bs.collapse', function() {
+                const iconContainer = question.querySelector('.faq-icon');
+                const plusIcon = iconContainer.querySelector('.faq-icon-plus');
+                const minusIcon = iconContainer.querySelector('.faq-icon-minus');
+                
+                // Show plus icon (closed state)
+                plusIcon.style.display = 'block';
+                minusIcon.style.display = 'none';
+                iconContainer.style.background = 'transparent';
+            });
+        }
+    });
+}
+
 // Initialize when page loads
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM loaded, initializing country selector...');
     initCountrySelector();
+    initFAQAccordion();
 });
