@@ -4,60 +4,12 @@
 
 /* Hero Section */
 .developers-hero {
-    background: linear-gradient(90deg, #E8F5E8 0%, #F0E8FF 100%);
-    background-image: 
-        linear-gradient(#ededed 1px, transparent 1px),
-        linear-gradient(90deg, #ededed 1px, transparent 1px);
-    background-size: 107px 128px;
-    padding: 10.5rem 0 6rem;
+    background: #ffffff url('../images/lp/background-frame.svg') no-repeat center center;
+    background-size: cover;
+    padding: 8.5rem 0 4rem;
     position: relative;
-    mask: linear-gradient(to bottom, black 0%, black 80%, transparent 100%);
 }
 
-.developers-hero::before {
-    content: '';
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    top: 156.63px;
-    left: -39.82px;
-    background: #198754;
-    filter: blur(100px);
-    opacity: 0.3;
-    border-radius: 50%;
-    box-shadow: 0 0 150px 100px rgba(25, 135, 84, 0.4);
-    z-index: 2;
-}
-
-.developers-hero::after {
-    content: '';
-    position: absolute;
-    top: 153.35px;
-    right: 100px;
-    width: 274.85px;
-    height: 273.78px;
-    background: #6F42C1;
-    filter: blur(100px);
-    opacity: 0.3;
-    border-radius: 50%;
-    box-shadow: 0 0 150px 100px rgba(111, 66, 193, 0.2);
-    z-index: 0;
-}
-
-.blur-circle-green {
-    content: '';
-    position: absolute;
-    top: 55px;
-    right: 200px;
-    width: 231.01px;
-    height: 231.01px;
-    background: #00CC83;
-    filter: blur(100px);
-    opacity: 0.3;
-    border-radius: 50%;
-    box-shadow: 0 0 150px 100px rgba(0, 204, 131, 0.2);
-    z-index: 0;
-}
 
 /* Hero Content */
 .hero-content {
@@ -269,23 +221,6 @@
     }
     
     /* Adjust blur effects for smaller screens */
-    .developers-hero::before {
-        width: 250px;
-        height: 250px;
-        left: -30px;
-    }
-    
-    .developers-hero::after {
-        width: 220px;
-        height: 220px;
-        right: 80px;
-    }
-    
-    .blur-circle-green {
-        width: 200px;
-        height: 200px;
-        right: 150px;
-    }
 }
 
 @media (max-width: 992px) {
@@ -308,26 +243,6 @@
     }
     
     /* Adjust blur effects for tablets */
-    .developers-hero::before {
-        width: 200px;
-        height: 200px;
-        left: -20px;
-        top: 120px;
-    }
-    
-    .developers-hero::after {
-        width: 180px;
-        height: 180px;
-        right: 60px;
-        top: 140px;
-    }
-    
-    .blur-circle-green {
-        width: 160px;
-        height: 160px;
-        right: 120px;
-        top: 40px;
-    }
     
     .trust-markers-section {
         padding: 5rem 0;
@@ -377,26 +292,6 @@
     }
     
     /* Adjust blur effects for mobile landscape */
-    .developers-hero::before {
-        width: 150px;
-        height: 150px;
-        left: -15px;
-        top: 100px;
-    }
-    
-    .developers-hero::after {
-        width: 140px;
-        height: 140px;
-        right: 40px;
-        top: 120px;
-    }
-    
-    .blur-circle-green {
-        width: 120px;
-        height: 120px;
-        right: 80px;
-        top: 30px;
-    }
     
     .trust-markers-section {
         padding: 4rem 0;
@@ -466,26 +361,6 @@
     }
     
     /* Adjust blur effects for mobile portrait */
-    .developers-hero::before {
-        width: 120px;
-        height: 120px;
-        left: -10px;
-        top: 80px;
-    }
-    
-    .developers-hero::after {
-        width: 100px;
-        height: 100px;
-        right: 20px;
-        top: 100px;
-    }
-    
-    .blur-circle-green {
-        width: 80px;
-        height: 80px;
-        right: 40px;
-        top: 20px;
-    }
     
     .trust-markers-section {
         padding: 3rem 0;
@@ -539,11 +414,6 @@
     }
     
     /* Hide blur effects on very small screens for better performance */
-    .developers-hero::before,
-    .developers-hero::after,
-    .blur-circle-green {
-        display: none;
-    }
     
     .trust-markers-section {
         padding: 2rem 0;
@@ -773,6 +643,296 @@
 
     .advantages-grid{
         max-width: 90%;
+    }
+}
+
+/* Right Choice Cards Grid */
+.right-choice-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 3rem auto 0;
+}
+
+.right-choice-card {
+    background: #212529;
+    border: 1px solid #343A40;
+    padding: 2rem;
+    text-align: left;
+}
+
+.right-choice-icon {
+    width: 42px;
+    height: 42px;
+    margin: 0 0 1.5rem 0;
+}
+
+.right-choice-img {
+    width: 42px;
+    height: 42px;
+}
+
+.right-choice-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+    line-height: 136%;
+}
+
+.right-choice-description {
+    font-size: 16px;
+    font-weight: 400;
+    color: #DEE2E6;
+    line-height: 164%;
+    margin-bottom: 0;
+}
+
+/* Responsive Design for Right Choice Cards */
+@media (max-width: 992px) {
+    .right-choice-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+        max-width: 800px;
+    }
+    
+    .right-choice-card {
+        padding: 1.5rem;
+    }
+    
+    .right-choice-title {
+        font-size: 16px;
+        font-weight: 700;
+        color: #FFFFFF;
+        line-height: 136%;
+    }
+    
+    .right-choice-description {
+        font-size: 16px;
+        font-weight: 400;
+        color: #DEE2E6;
+        line-height: 164%;
+    }
+}
+
+@media (max-width: 768px) {
+    .right-choice-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        max-width: 500px;
+    }
+    
+    .right-choice-card {
+        padding: 1.25rem;
+    }
+    
+    .right-choice-icon {
+        width: 42px;
+        height: 42px;
+        margin: 0 0 1rem 0;
+    }
+    
+    .right-choice-img {
+        width: 42px;
+        height: 42px;
+    }
+    
+    .right-choice-title {
+        font-size: 16px;
+        font-weight: 700;
+        color: #FFFFFF;
+        line-height: 136%;
+    }
+    
+    .right-choice-description {
+        font-size: 16px;
+        font-weight: 400;
+        color: #DEE2E6;
+        line-height: 164%;
+    }
+}
+
+/* JavaScript Developer Skills & Expertise Section */
+.js-skills-expertise {
+    background: #FFFFFF;
+    padding: 4rem 0;
+}
+
+.js-skills-badge {
+    display: inline-block;
+    background: #F1EAFD;
+    color: #6610F2;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.js-skills-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 1rem;
+    line-height: 136%;
+}
+
+.js-skills-description {
+    font-size: 16px;
+    color: #343A40;
+    font-weight: 400;
+    line-height: 164%;
+    margin-bottom: 0;
+}
+
+/* Filter Buttons */
+.js-filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.js-filter-btn {
+    background: #DEE2E6;
+    color: #343A40;
+    padding: 0.75rem 1.5rem;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 136%;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.js-filter-btn:hover {
+    background: #E9ECEF;
+    color: #495057;
+}
+
+.js-filter-btn.active {
+    background: #212529;
+    color: #FFFFFF;
+}
+
+/* Skills Cards Grid */
+.js-skills-cards-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.row.justify-content-center {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.js-skill-card {
+    background: #F8F9FA;
+    border: 1px solid #DEE2E6;
+    padding: 1rem;
+    text-align: left;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.js-skill-card:hover {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+}
+
+.js-skill-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1rem;
+}
+
+.js-skill-img {
+    width: 42px;
+    height: 42px;
+}
+
+.js-skill-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 0.5rem;
+    line-height: 164%;
+}
+
+.js-skill-description {
+    font-size: 16px;
+    color: #343A40;
+    line-height: 154%;
+    margin-bottom: 0;
+    flex-grow: 1;
+    font-weight: 400;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .js-skills-title {
+        font-size: 28px;
+    }
+    
+    .js-skills-cards-grid {
+        max-width: 1000px;
+    }
+    
+    .row.justify-content-center {
+        max-width: 1000px;
+    }
+    
+    .js-filter-buttons {
+        gap: 0.5rem;
+        max-width: 1000px;
+    }
+    
+    .js-filter-btn {
+        padding: 0.625rem 1.25rem;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .js-skills-expertise {
+        padding: 3rem 0;
+    }
+    
+    .js-skills-title {
+        font-size: 24px;
+    }
+    
+    .js-skills-description {
+        font-size: 15px;
+    }
+    
+    .js-skills-cards-grid {
+        max-width: 1000px;
+    }
+    
+    .row.justify-content-center {
+        max-width: 1000px;
+    }
+    
+    .js-skill-card {
+        padding: 1.25rem;
+    }
+    
+    .js-filter-buttons {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+        max-width: 1000px;
+    }
+    
+    .js-filter-btn {
+        white-space: nowrap;
+        flex-shrink: 0;
     }
 }
 
@@ -1135,7 +1295,7 @@
 
 .lp-cost-feature {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     margin-bottom: 0.25rem;
 }
 
@@ -1240,34 +1400,68 @@
 /* Cost Factors */
 .lp-cost-factors {
     text-align: center;
+    margin-top: 2rem;
 }
 
 .lp-cost-factors-content {
     display: inline-block;
-    background: transparent;
-    padding: 1rem 1.5rem;
+    background: #F8F9FA;
+    padding: 1.5rem 2rem;
     border: 1px solid #DEE2E6;
+    max-width: 600px;
+}
+
+.lp-cost-factors-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
 }
 
 .lp-cost-factors-icon {
-    width: 20px;
-    height: 20px;
-    vertical-align: middle;
+    width: 16px;
+    height: 16px;
     margin-right: 0.5rem;
 }
 
 .lp-cost-factors-label {
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 600;
     color: #343A40;
-    margin-right: 0.5rem;
 }
 
 .lp-cost-factors-list {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.lp-cost-factors-column {
+    flex: 1;
+    text-align: left;
+}
+
+.lp-cost-factors-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lp-cost-factors-column li {
     font-size: 14px;
-    line-height: 146%;
-    font-weight: 500;
+    line-height: 1.6;
     color: #212529;
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.lp-cost-factors-column li:before {
+    content: "•";
+    color: #212529;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
 }
 
 /* Responsive Design for Cost & Engagement Section */
@@ -1318,6 +1512,16 @@
     .lp-cost-factors-content {
         text-align: center;
         padding: 1rem;
+        max-width: 100%;
+    }
+    
+    .lp-cost-factors-list {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .lp-cost-factors-column {
+        text-align: left;
     }
 }
 
@@ -1639,4 +1843,161 @@
         font-size: 14px;
         padding: 10px 16px;
     }
+}
+
+
+/* JavaScript Developers Section */
+.javascript-developers-trust-markers .container {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    padding: 2rem 2rem 4rem;
+}
+
+.why-choose-js-section .container {
+    background: #F8F9FA;
+    border-top: 1px solid #DEE2E6;
+    border-right: 1px solid #DEE2E6;
+    border-left: 1px solid #DEE2E6;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding: 2rem 2rem 0;
+}
+
+.right-choice-lp-js .right-choice-cards-grid {
+    max-width: 100%;
+}
+
+.right-choice-lp-js .talent-header::before {
+    top: -12rem;
+}
+
+.right-choice-lp-js .right-choice-card {
+    padding: 1.5rem;
+}
+
+.js-white-bg {
+    background: #F8F9FA;
+    padding: 4rem 0;
+}
+
+.js-white-bg .talent-title {
+    color: #000000;
+}
+
+.js-white-bg .talent-description {
+    color: #6C757D;
+}
+
+.js-cost-factors-content {
+    max-width: 1000px !important;
+    margin: 0 auto;
+    display: block;
+    border-radius: 0;
+}
+
+.js-cost-factors-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.js-cost-factors-header {
+    justify-content: flex-start;
+}
+
+.js-cost-factors-list {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.js-cost-factors-column {
+    flex: 1;
+    text-align: left;
+}
+
+.js-cost-factors-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.js-cost-factors-column li {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #495057;
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.js-cost-factors-column li:before {
+    content: "•";
+    color: #212529;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* JS Choice List Styles */
+.lp-choice-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.lp-choice-list li {
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 164%;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.lp-choice-bullet {
+    width: 13px;
+    height: 13px;
+    flex-shrink: 0;
+    margin-top: 7px;
+}
+
+.jp-choice-cards {
+    max-width: 990px;
+}
+
+.js-get-started-card {
+    text-align: center;
+}
+
+.js-get-started-card .get-started-buttons {
+    justify-content: center;
+}
+
+.js-get-started-card .get-started-text {
+    text-align: center;
+    margin: auto;
+    max-width: 570px;
+    margin-bottom: 3.5rem;
+}
+
+@media (max-width: 992px) {
+    .lp-advantages-badge {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .why-choose-js-section {
+        margin: 0.5rem;
+        margin-bottom: 0;
+    }
+
+    .javascript-developers-trust-markers {
+        padding: 0;
+        margin-top: 0;
+    }
+
 }

@@ -899,6 +899,8 @@
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 0.75rem;
+    display: inline-block;
+    width: fit-content;
 }
 
 .section-title {
@@ -1863,7 +1865,7 @@
     }
     
     .success-card {
-        min-height: 350px;
+        min-height: auto;
     }
     
     /* Mobile carousel navigation */
@@ -2010,6 +2012,7 @@
     display: block;
     position: relative;
     z-index: 10;
+    margin-bottom: 1rem;
 }
 
 .talent-header::before {
@@ -2460,8 +2463,8 @@
         border-radius: 0;
         margin-top: 1rem;
         padding: 1rem;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-        border: 1px solid #e9ecef;
+        /* box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        border: 1px solid #e9ecef; */
     }
     
     .navbar-nav {
@@ -2668,7 +2671,7 @@
     font-size: 32px;
     font-weight: 700;
     font-style: Bold;
-    line-height: 36px;
+    line-height: 136%;
     color: #FFFFFF;
     margin-bottom: 0.5rem;
 }
@@ -2689,6 +2692,7 @@
     position: relative;
     z-index: 1;
     align-items: flex-start;
+    justify-content: center;
 }
 
 /* Force vertical stacking on small screens */
@@ -2718,6 +2722,7 @@
     font-style: SemiBold;
     color: #FFFFFF;
     cursor: pointer;
+    justify-content: center;
 }
 
 .btn-hire-talent {
